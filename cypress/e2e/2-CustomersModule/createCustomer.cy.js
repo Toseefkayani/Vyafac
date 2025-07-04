@@ -37,7 +37,7 @@ describe('Vyafac Login - Positive Test', () => {
         cy.get('button').contains('Add customer').click();
         cy.wait(2000);
 
-        // Assert success message
+        // Assert success message & delete newly created customer
         cy.contains('Customer created successfully').should('be.visible');
         cy.get('a[class="ant-dropdown-trigger"]').first().click();
         cy.contains('Delete').click();
